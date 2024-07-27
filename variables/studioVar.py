@@ -1,4 +1,3 @@
-
 def getbystudio(studioname):
     variables = {
         'search': studioname,
