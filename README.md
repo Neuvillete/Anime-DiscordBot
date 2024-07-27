@@ -1,4 +1,4 @@
-Sure, here is a more refined and comprehensive version of the README:
+Here is a quick guide to understanting this template!
 
 ```markdown
 # Anime/Manga Search Query Generator
