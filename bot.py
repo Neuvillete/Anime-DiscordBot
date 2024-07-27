@@ -39,6 +39,24 @@ class MyBot(commands.Bot):
 
 bot = MyBot()
 
+@bot.command()
+async def anime(ctx, *, title):
+    embed = animesearch(title)
+    await ctx.send(embed=embed)
+
+
+@bot.command()
+async def manga(ctx, *, title):
+    embed = mangasearch(title)
+    await ctx.send(embed=embed)
+
+
+
+@bot.command()
+async def character(ctx, *, charname):
+    embed = charsearch(charname)
+    await ctx.send(embed=embed)
+
 
 @bot.command()
 @commands.is_owner()
