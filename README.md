@@ -9,7 +9,7 @@ This project provides a simple function to generate a GraphQL query for searchin
 
 The main function `search_by_title(command)` returns a GraphQL query string based on the provided command. Here's how to use it:
 
-```python
+```
 from your_module import search_by_title
 
 # Example command can be 'anime', 'manga', 'character', or 'studio'
@@ -18,7 +18,7 @@ query = search_by_title('anime')
 
 This query can be used with GraphQL requests to the Anilist API. Example usage:
 
-```
+```python
 import requests
 
 url = 'https://graphql.anilist.co'
