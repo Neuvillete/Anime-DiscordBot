@@ -3,6 +3,12 @@ import jishaku
 from discord.ext import commands
 import os
 
+from commands.searchAnime import animesearch
+from commands.searchManga import mangasearch
+from commands.searchStudio import studiosearch
+from commands.searchCharacter import charsearch
+
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
@@ -44,17 +50,19 @@ async def anime(ctx, *, title):
     embed = animesearch(title)
     await ctx.send(embed=embed)
 
-
 @bot.command()
 async def manga(ctx, *, title):
     embed = mangasearch(title)
     await ctx.send(embed=embed)
 
-
-
 @bot.command()
 async def character(ctx, *, charname):
     embed = charsearch(charname)
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def studio(ctx, *, title):
+    embed = studiosearch(title)
     await ctx.send(embed=embed)
 
 
