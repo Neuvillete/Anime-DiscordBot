@@ -1,15 +1,27 @@
-Here’s a detailed README with comprehensive explanations for the `anime`, `character`, `manga`, and `studio` commands:
+Sure, here is a more refined and comprehensive version of the README:
 
 ```markdown
 # Anime/Manga Search Query Generator
 
-This project provides a simple function to generate a GraphQL query for searching anime, manga, characters, or studios using the Anilist API.
+This project provides a simple function to generate GraphQL queries for searching anime, manga, characters, or studios using the Anilist API.
+
+## Table of Contents
+
+- [Usage](#usage)
+- [Command Details](#command-details)
+  - [Anime](#anime)
+  - [Manga](#manga)
+  - [Character](#character)
+  - [Studio](#studio)
+- [Example Code](#example-code)
+- [API Response](#api-response)
+- [Notes](#notes)
 
 ## Usage
 
 The main function `search_by_title(command)` returns a GraphQL query string based on the provided command. Here's how to use it:
 
-```
+```python
 from your_module import search_by_title
 
 # Example command can be 'anime', 'manga', 'character', or 'studio'
@@ -31,12 +43,11 @@ response = requests.post(url, json={'query': query, 'variables': variables})
 data = response.json()
 ```
 
-
 ## Command Details
 
 ### Anime
 
-Generates a query to fetch information about anime titles. The query retrieves:
+Generates a query to fetch detailed information about anime titles. The query retrieves:
 
 - **Title**: Romaji and English versions of the title.
 - **Site URL**: URL to the anime's page on Anilist.
@@ -55,7 +66,7 @@ Generates a query to fetch information about anime titles. The query retrieves:
 
 ### Manga
 
-Generates a query to fetch information about manga titles. The query retrieves:
+Generates a query to fetch detailed information about manga titles. The query retrieves:
 
 - **Title**: Romaji and English versions of the title.
 - **Site URL**: URL to the manga's page on Anilist.
@@ -71,7 +82,7 @@ Generates a query to fetch information about manga titles. The query retrieves:
 
 ### Character
 
-Generates a query to fetch information about characters. The query retrieves:
+Generates a query to fetch detailed information about characters. The query retrieves:
 
 - **Name**: Full and native names of the character.
 - **Image URL**: URL to the character's image.
@@ -82,16 +93,12 @@ Generates a query to fetch information about characters. The query retrieves:
 
 ### Studio
 
-Generates a query to fetch information about studios. The query retrieves:
+Generates a query to fetch detailed information about studios. The query retrieves:
 
 - **Name**: Name of the studio.
 - **Site URL**: URL to the studio's page on Anilist.
 - **Media Produced**: List of anime titles produced by the studio.
 - **Favorites Count**: Number of users who favorited the studio.
-
-## API Response
-
-The Anilist API will return a JSON response containing detailed information about the searched media based on the query structure.
 
 ## Example Code
 
@@ -125,12 +132,17 @@ if response.status_code == 200:
     print(data)
 else:
     print(f"Error: {response.status_code}")
-
 ```
 
-## Note
+## API Response
 
-This function generates a query string only. You need to use it with appropriate GraphQL request handling to fetch data from the Anilist API.
+The Anilist API will return a JSON response containing detailed information about the searched media based on the query structure.
+
+## Notes
+
+- This function generates a query string only. You need to use it with appropriate GraphQL request handling to fetch data from the Anilist API.
+- Ensure you handle possible errors and edge cases when making API requests.
+- For more information about the Anilist API, refer to the [official documentation](https://anilist.gitbook.io/anilist-apiv2-docs/).
 ```
 
-This README provides detailed information about how to use the `search_by_title` function, what data each command retrieves, and includes a complete example of making a request and handling the response.
+You are free to use this code as you want!!.
