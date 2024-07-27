@@ -13,24 +13,12 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 
-
 class MyBot(commands.Bot):
     def __init__(self):
-        super().__init__(command_prefix = '!', intents = intents, owner_id = "Your owner id here")
+        super().__init__(command_prefix='!', intents=intents, owner_id="Your owner id here")
 
     async def setup_hook(self):
         print("Setup hook called")
-        for filename in os.listdir('./cogs'):
-            if filename.endswith('.py'):
-                try:
-                    await self.load_extension(f'cogs.{filename[:-3]}')
-                    print(f"Loaded extension: {filename}")
-                except Exception as e:
-                    print(f"Failed to load extension {filename}: {e}")
-
-        await bot.load_extension("jishaku")
-        print("Loaded extension jishaku")
-
         print("Attempting to sync commands...")
         try:
             synced = await self.tree.sync()
