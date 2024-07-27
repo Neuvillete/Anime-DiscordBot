@@ -18,7 +18,7 @@ query = search_by_title('anime')
 
 This query can be used with GraphQL requests to the Anilist API. Example usage:
 
-```python
+```
 import requests
 
 url = 'https://graphql.anilist.co'
@@ -30,6 +30,7 @@ variables = {
 response = requests.post(url, json={'query': query, 'variables': variables})
 data = response.json()
 ```
+
 
 ## Command Details
 
