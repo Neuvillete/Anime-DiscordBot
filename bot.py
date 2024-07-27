@@ -1,7 +1,7 @@
-import discord
-import jishaku
-from discord.ext import commands
 import os
+import discord
+from discord.ext import commands
+from discord.ext import app_commands
 
 from commands.searchAnime import animesearch
 from commands.searchManga import mangasearch
