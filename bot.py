@@ -40,16 +40,6 @@ class MyBot(commands.Bot):
 bot = MyBot()
 
 
-@bot.tree.command(name="ping", description="Check if the bot is responsive")
-async def ping(interaction: discord.Interaction):
-    await interaction.response.send_message("Pong!")
-
-
-@bot.command()
-async def hello(ctx):
-    await ctx.send("Hello!")
-
-
 @bot.command()
 @commands.is_owner()
 async def sync(ctx):
