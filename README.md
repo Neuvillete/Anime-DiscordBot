@@ -1,4 +1,4 @@
-Certainly! Here’s a more detailed README with comprehensive explanations for the `anime`, `character`, `manga`, and `studio` commands:
+Here’s a detailed README with comprehensive explanations for the `anime`, `character`, `manga`, and `studio` commands:
 
 ```markdown
 # Anime/Manga Search Query Generator
