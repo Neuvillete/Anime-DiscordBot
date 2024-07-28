@@ -33,22 +33,22 @@ class MyBot(commands.Bot):
 
 bot = MyBot()
 
-@bot.command()
+@bot.tree.command()
 async def anime(ctx, *, title):
     embed = animesearch(title)
     await ctx.send(embed=embed)
 
-@bot.command()
+@bot.tree.command()
 async def manga(ctx, *, title):
     embed = mangasearch(title)
     await ctx.send(embed=embed)
 
-@bot.command()
+@bot.tree.command()
 async def character(ctx, *, charname):
     embed = charsearch(charname)
     await ctx.send(embed=embed)
 
-@bot.command()
+@bot.tree.command()
 async def studio(ctx, *, title):
     embed = studiosearch(title)
     await ctx.send(embed=embed)
