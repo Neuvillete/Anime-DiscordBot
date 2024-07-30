@@ -1,5 +1,6 @@
 import os
 import discord
+import jishaku
 from discord.ext import commands
 from discord.ext import app_commands
 
@@ -29,6 +30,7 @@ class MyBot(commands.Bot):
     async def on_ready(self):
         print(f'{self.user} has connected to Discord!')
         print(f"Bot is in {len(self.guilds)} guilds")
+        await bot.load_extension('jishaku')
 
 
 bot = MyBot()
@@ -73,7 +75,7 @@ async def on_command_error(ctx, error):
         await ctx.send(f"Command not found. Available commands: {', '.join([c.name for c in bot.commands])}")
     else:
         print(f"An error occurred: {error}")
-
+bo
 
 if __name__ == "__main__":
     bot.run('Your bot token here')
