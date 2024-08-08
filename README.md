@@ -1,6 +1,5 @@
 Here is a quick guide to understanting this template!
 
-```markdown
 # Anime/Manga Search Query Generator
 
 This project provides a simple function to generate GraphQL queries for searching anime, manga, characters, or studios using the Anilist API.
