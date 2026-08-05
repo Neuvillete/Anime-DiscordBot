@@ -1,6 +1,6 @@
 @echo off
 REM Change directory to the location of your main.py script
-cd /d "C:\Users\Aditya\Projects\Anime-DiscordBot"
+cd /d ""
 
 REM Activate the virtual environment (if you have one)
 call venv\Scripts\activate
